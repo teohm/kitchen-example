@@ -1,0 +1,43 @@
+{
+  "run_list":[
+    "databox",
+    "rackbox"
+  ],
+  "appbox": {
+    "deploy_keys": ["ssh-rsa 5bnmu234567890sdfghghjk"],
+    "admin_keys": ["ssh-rsa 456789fghjkvbn567"]
+  },
+  "databox": {
+    "db_root_password": "welcome!",
+    "databases": {
+      "mysql": [
+        { "username": "app1",
+          "password": "app1",
+          "database_name": "app1_production" }
+      ],
+      "postgresql": [
+        { "username": "app2",
+          "password": "app2",
+          "database_name": "app2_production" }
+      ]
+    }
+  },
+  "rackbox": {
+    "ruby": {
+      "versions": ["1.9.3-p385", "1.9.2-p320"],
+      "global_version": "1.9.3-p385"
+    },
+    "apps": {
+      "unicorn": [
+        { "appname": "app1",
+          "hostname": "app1.test.com"
+        }
+      ],
+      "passenger": [
+        { "appname": "app2",
+          "hostname": "app2.test.com" }
+      ]
+    }
+  }
+}
+
