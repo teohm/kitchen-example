@@ -1,16 +1,22 @@
 Kitchen Example
 ===============
 
-An example of using rackbox & databox and chef-solo to provision
-a full-stack rack-based web server.
+An example of using
+[`rackbox`](https://github.com/teohm/rackbox-cookbook) &
+[`databox`](https://github.com/teohm/databox-cookbook) and `knife-solo` to provision
+a full-stack, rack-based web server.
 
 Provision a full-stack, rack-based server
 -----
 
 ```
+git clone git://github.com/teohm/kitchen-example.git
+cd kitchen-example
+
+# install berkshelf, knife-solo
 bundle install
 
-# vendoring cookbooks
+# download cookbooks
 bundle exec berks install -p cookbooks/
 
 # copy & edit the node config
