@@ -6,7 +6,7 @@ An example of using
 [`databox`](https://github.com/teohm/databox-cookbook) and `knife-solo` to provision
 a full-stack, rack-based web server.
 
-### How generate `kitchen-example` in 4 steps:
+### How re-generate `kitchen-example`:
 
  1. Create `Gemfile`:
 
@@ -30,7 +30,11 @@ a full-stack, rack-based web server.
     ```
     bundle install
     ```
- 4. Copy the node config example
+ 4. Setup `knife-solo` directory structure
+    ```
+    bundle exec knife solo init .
+    ```
+ 5. Copy the node config example
 
     ```
     curl https://raw.github.com/teohm/kitchen-example/master/nodes/host.json.example --output myhost.json
