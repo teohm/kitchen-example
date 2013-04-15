@@ -6,7 +6,7 @@ An example of using
 [`databox`](https://github.com/teohm/databox-cookbook) and `knife-solo` to provision
 a full-stack, rack-based web server.
 
-### How re-generate `kitchen-example`:
+### How to build `kitchen-example` from scratch:
 
  1. Create `Gemfile`:
 
