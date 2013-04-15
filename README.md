@@ -37,7 +37,7 @@ a full-stack, rack-based web server.
  5. Copy the node config example
 
     ```
-    curl https://raw.github.com/teohm/kitchen-example/master/nodes/host.json.example --output myhost.json
+    curl https://raw.github.com/teohm/kitchen-example/master/nodes/host.json.example --output nodes/myhost.json
     ```
 
 Provision rack-based server
