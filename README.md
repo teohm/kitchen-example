@@ -6,7 +6,37 @@ An example of using
 [`databox`](https://github.com/teohm/databox-cookbook) and `knife-solo` to provision
 a full-stack, rack-based web server.
 
-Provision a full-stack, rack-based server
+### How generate `kitchen-example` in 4 steps:
+
+ 1. Create `Gemfile`:
+
+    ```
+    source "https://rubygems.org"
+    
+    gem "knife-solo", "0.3.0pre3"
+    gem "berkshelf"
+    ```
+ 2. Create `Berksfile`:
+
+    ```
+    site :opscode
+    
+    cookbook "runit", "1.1.2"
+    cookbook "databox"
+    cookbook "rackbox"
+    ```
+ 3. Install ruby gems
+
+    ```
+    bundle install
+    ```
+ 4. Copy the node config example
+
+    ```
+    curl https://raw.github.com/teohm/kitchen-example/master/nodes/host.json.example --output myhost.json
+    ```
+
+Provision rack-based server
 -----
 
 ```
